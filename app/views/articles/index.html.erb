@@ -1,8 +1,12 @@
-<h1>All Articles</h1>
-<% @articles.each do |article| %>
-  <p>
-    <%= link_to "#{article.title}", article_path(article.id) %>
-  </p>
-<% end %>
+<div class="container w-50">
+  <h1>All Articles</h1>
+  <% @articles.each do |article| %>
+    <div class="article">
+      <%= link_to "#{article.title}", article_path(article.id), class: "article-title" %>
+      <%= link_to "delete", article_path(article.id), method: :delete, data: {confirm: "Are you sure?" }, class: "btn btn-primary" %>
+    </div>
+  <% end %>
 
-<h3> <%= link_to "Create a new Article", articles_new_path %> </h3>
+  <h3> <%= link_to "Create a new Article", articles_new_path %> </h3>
+</div>
+

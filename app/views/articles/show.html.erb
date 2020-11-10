@@ -2,3 +2,4 @@
 <h3> <%= @article.content %> </h3>
 
 <%= link_to "homepage", articles_path %>
+<%= link_to "Update post", article_edit_path(@article.id) %>

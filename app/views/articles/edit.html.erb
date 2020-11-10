@@ -1,10 +1,8 @@
 <div class="container w-50">
-  <h1>Create a new Article</h1>
+  <h1>Update a Article</h1>
   <%= simple_form_for(@article) do |f| %>
     <%= f.input :title %>
     <%= f.input :content %>
     <%= f.submit %>
   <% end %>
-  <%= link_to "homepage", articles_path %>
 </div>
-
